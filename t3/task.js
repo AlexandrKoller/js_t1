@@ -4,12 +4,15 @@ let lost = document.getElementById('lost')
 function success() {
     if (++dead.textContent === 10) {
       alert('Победа!');
-      this.reset();
-    }
+      dead.textContent = 0;
+      lost.textContent = 0;
+          }
   }
 function fail() {
     if (++lost.textContent === 5) {
       alert('Вы проиграли!');
+      dead.textContent = 0;
+      lost.textContent = 0;
     };
   }
 Array.from(holes).forEach( hole => {
